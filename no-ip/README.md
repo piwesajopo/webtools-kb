@@ -31,7 +31,7 @@ To make it load on system startup add the following lines to your **/etc/rc.loca
 
 ### Delivering Traffic to your Raspberry:
 
-You are probably using your Raspberry at home if you are using a service like NoIP.com, therefore you will want to do additional configuration to deliver traffic from outside your network. Here are come steps you will need to perform:
+You are probably using your Raspberry at home if you are using a service like NoIP.com, therefore you will want to do additional configuration to deliver traffic from outside your network. Here are some steps you will need to perform:
 
 #### Static IP Configuration
 
@@ -43,7 +43,7 @@ There are two ways you can achieve this:
   
 * **Configure on the Raspberry itself**
 
-  It is recommended that you configure static IPs on your router, but if that's not an option, you can make specific configurations that only take place when connecting to certain Wi-Fi networks. To achieve this, you need to modify your ***/etc/dhcpcd.conf*** file by adding and specific entry for each Wi-Fi network you may be connecting to inside your house.
+  It is recommended that you configure static IPs on your router, but if that's not an option, you can make specific configurations that only takes place when connecting to certain Wi-Fi networks. To achieve this, you need to modify your ***/etc/dhcpcd.conf*** file by adding an specific entry for each Wi-Fi network you may be connecting to inside your house.
 
   Let's say you want to add a configuration for SSID **my-cool-ssid** with the static IP **10.0.0.10**. You should add the following to the end of your ***/etc/dhcpcd.conf*** file:
 
@@ -62,7 +62,7 @@ static domain_name_servers=192.168.0.1
 
 #### Configure Port-Forwarding to your static IP address.
 
-  After you have properly setup the static IP address, you must configure some port forwarding rules to your router. For example you may want to route incomming traffic from the internet for port 22 (SSH Service) to be delivered to your raspberry pi. The specific way to perform this configuration will vary according to your router brand, but it should be located under *Port Forwarding / Port Mapping options*.
+  After you have properly setup the static IP address, you must configure some port forwarding rules to your router. For example you may want to route incomming traffic from the internet for port 22 (SSH Service) to be delivered to your Raspberry Pi. The specific way to perform this configuration will vary according to your router brand, but it should be located under *Port Forwarding / Port Mapping options*.
   
 #### Ensure proper IP resolution when connecting to the Raspberry from inside the same Wi-Fi Network.
 
