@@ -1,3 +1,5 @@
+[![Discord Server](https://img.shields.io/discord/801531591410712608?label=Discord%20Chat)](https://discord.com/channels/801531591410712608/801531591410712611)
+
 # Installing and Configuring Dynamic IP using NoIP.com
 
 ### Make and Install:
