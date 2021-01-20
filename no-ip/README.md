@@ -47,7 +47,7 @@ There are two ways you can achieve this:
 
   Let's say you want to add a configuration for SSID **my-cool-ssid** with the static IP **10.0.0.10**. You should add the following to the end of your ***/etc/dhcpcd.conf*** file:
 
-```
+```bash
 # Example static IP configuration for specific ssid
 #   In this example the Wi-Fi has the following configuration on the router
 #     Subnet Mask:     255.255.255.0
@@ -68,5 +68,5 @@ static domain_name_servers=192.168.0.1
 
   When connecting to your raspberry from a device that is connected to the same Network, your router may have some trouble delivering traffic to your raspberry. To avoid this, you can configure an static DNS for the **NoIP.com** hostname you have pointing to your router public IP. 
   
-  For example you may wish to configure domain names **www.myNoIPsubdomain.ddns.net** and **myNoIPsubdomain.ddns.net** to resolve to static IP **192.168.1.10**.
+  For example you may wish to configure domain names **`www.myNoIPsubdomain.ddns.net`** and **myNoIPsubdomain.ddns.net** to resolve to static IP **192.168.1.10**.
   
