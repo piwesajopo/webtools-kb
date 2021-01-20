@@ -68,5 +68,5 @@ static domain_name_servers=192.168.0.1
 
   When connecting to your raspberry from a device that is connected to the same Network, your router may have some trouble delivering traffic to your raspberry. To avoid this, you can configure an static DNS for the **NoIP.com** hostname you have pointing to your router public IP. 
   
-  For example you may wish to configure domain names **`www.myNoIPsubdomain.ddns.net`** and **`myNoIPsubdomain.ddns.net** to resolve to static IP **192.168.1.10**.
+  For example you may wish to configure domain names **`www.myNoIPsubdomain.ddns.net`** and **`myNoIPsubdomain.ddns.net`** to resolve to static IP **192.168.1.10**.
   
