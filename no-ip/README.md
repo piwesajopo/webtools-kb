@@ -47,7 +47,7 @@ There are two ways you can achieve this:
 
   Let's say you want to add a configuration for SSID **my-cool-ssid** with the static IP **10.0.0.10**. You should add the following to the end of your ***/etc/dhcpcd.conf*** file:
 
-```bash
+```
 # Example static IP configuration for specific ssid
 #   In this example the Wi-Fi has the following configuration on the router
 #     Subnet Mask:     255.255.255.0
@@ -58,6 +58,23 @@ static ip_address=192.168.0.10/24
 static routers=192.168.0.1
 static domain_name_servers=192.168.0.1
 #static domain_name_servers=192.168.0.1 8.8.8.8 fd51:42f8:caae:d92e::1
+```
+
+- [x] **Tip:** If you don't know the values for your router and domain name server IPs, you can use the [following](https://github.com/piwesajopo/webtools-kb/blob/main/no-ip/dhcp_ssid_static.sh) script:
+```bash
+if [ -z $2 ] ; then
+        echo
+        echo "Sintax: $0 <SSID> <STATIC_IP>"
+        echo
+        exit
+fi
+
+echo
+echo "# Static IP configuration for SSID $1:"
+echo "ssid $1"
+echo "static ip_address=${2}/24"
+echo "static routers=`ip r | grep default | awk '{print $3}'`"
+echo "static domain_name_servers=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`"
 ```
 
 #### Configure Port-Forwarding to your static IP address.
