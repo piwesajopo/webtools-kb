@@ -39,7 +39,7 @@ There are two ways you can achieve this:
 
 * **On your router**
 
-  Your modem/router probably allows specifying static IPs for a given MAC address. You can check your MAC address by using the command `ifconfig wlan0` or `ifconfig eth0` for Wi-Fi interface MAC address and Ethernet Interface MAC address respectively. The specific way to perform this configuration will vary according to your router brand, but it should be located along with other DHCP Options.
+  Your modem/router probably allows specifying static IPs for a given MAC address. You can check your MAC address by using the command **`ifconfig wlan0`** or **`ifconfig eth0`** for Wi-Fi interface MAC address and Ethernet Interface MAC address respectively. The specific way to perform this configuration will vary according to your router brand, but it should be located along with other DHCP Options.
   
 * **Configure on the Raspberry itself**
 
